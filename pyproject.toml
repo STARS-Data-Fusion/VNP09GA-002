@@ -1,0 +1,42 @@
+[build-system]
+requires = ["setuptools>=60", "setuptools-scm>=8.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "VNP09GA-002"
+version = "1.0.0"
+description = "VIIRS/NPP Surface Reflectance Daily L2G Global 1 km and 500 m SIN Grid Search and Download Utility"
+readme = "README.md"
+authors = [
+    { name = "Gregory H. Halverson", email = "gregory.h.halverson@jpl.nasa.gov" },
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "colored-logging",
+    "earthaccess",
+    "modland>=1.1.0",
+    "python-dateutil",
+    "rasters",
+    "VIIRS-Tiled-Granules>=1.0.2"
+]
+
+requires-python = ">=3.11"
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=6.0",
+    "pytest-cov",
+]
+
+[tool.setuptools.package-data]
+VNP09GA_002 = ["*.txt"]
+
+[project.urls]
+"Homepage" = "https://github.com/STARS-Data-Fusion/VNP09GA-002"
+
+[tool.setuptools.packages.find]
+include = ["VNP09GA_002"]
+exclude = ["data", "build", "tests"]
