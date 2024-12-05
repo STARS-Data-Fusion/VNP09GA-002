@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "VNP09GA-002"
-version = "1.0.0"
+version = "1.0.1"
 description = "VIIRS/NPP Surface Reflectance Daily L2G Global 1 km and 500 m SIN Grid Search and Download Utility"
 readme = "README.md"
 authors = [
