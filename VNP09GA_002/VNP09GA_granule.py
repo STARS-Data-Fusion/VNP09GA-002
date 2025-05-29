@@ -572,3 +572,11 @@ class VNP09GAGranule(VIIRSTiledGranule):
         albedo.cmap = ALBEDO_COLORMAP
 
         return albedo
+    
+    albedo = property(get_albedo)
+
+    def variable(self, variable: str) -> Raster:
+        if hasattr(self, variable):
+            return getattr(self, variable)
+        else:
+            raise AttributeError(f"Variable '{variable}' not found in VNP21A1DGranule.")
