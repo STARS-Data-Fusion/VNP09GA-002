@@ -50,8 +50,6 @@ class VNP09GA(VIIRSTiledProductConnection):
         if geometry is None:
             geometry = generate_modland_grid(tile=tile, tile_size=tile_size)
 
-        print("searching for granules")
-
         remote_granules = self.search(
             date_UTC=date_UTC,
             geometry=geometry,
@@ -59,14 +57,12 @@ class VNP09GA(VIIRSTiledProductConnection):
             tile_size=tile_size
         )
 
-        print("retrieving granules")
         granules = [
             retrieve_granule(remote_granule)
             for remote_granule 
             in remote_granules
         ]
 
-        print("extracting images")
         images = [
             granule.variable(variable)
             for granule 
