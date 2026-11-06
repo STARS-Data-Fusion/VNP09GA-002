@@ -1,10 +1,11 @@
 # VIIRS/NPP Surface Reflectance Daily L2G Global 1 km and 500 m SIN Grid Search and Download Utility
 
 This tool uses the `earthaccess` library to search and download VNP09GA collection 2 surface reflectance remote sensing data products from the Visible Infrared Imaging Radiometer Suite (VIIRS).
-
+<!-- 
 [Gregory H. Halverson](https://github.com/gregory-halverson-jpl) (they/them)<br>
 [gregory.h.halverson@jpl.nasa.gov](mailto:gregory.h.halverson@jpl.nasa.gov)<br>
 NASA Jet Propulsion Laboratory 329G
+-->
 
 ## Installation
 
